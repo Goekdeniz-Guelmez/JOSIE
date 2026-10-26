@@ -5,13 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>JOSIE-Voice · Talk to your Mac</title>
     <link rel="icon" href="logo.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&display=swap"
-    />
-    <link rel="stylesheet" href="styles.css?v=9010a03f9f" />
+    <link rel="stylesheet" href="styles.css?v=sf-system-type-20261026" />
     <link rel="stylesheet" href="hero.css?v=f803c00533" />
     <style>
       :root, :root[data-theme] {
@@ -19,7 +13,7 @@
         --text-primary: #fff;
         --text-secondary: rgb(255 255 255 / 0.8);
         --stroke-secondary: rgb(255 255 255 / 0.14);
-        --x-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", var(--sans);
+        --x-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
         --x-serif: "New York", ui-serif, "Iowan Old Style", Georgia, serif;
         --glass-dim: 0.3;
         --orb-glow: 255 170 120;
@@ -29,10 +23,10 @@
       body { font-family: var(--x-sans); }
       /* sky: a fixed layer at z 0 with a CSS gradient under the canvas, content raised to z 1 */
       #sky {
-        --sky-top: rgb(52 120 205); --sky-mid: rgb(130 182 236); --sky-hor: rgb(214 233 251);
+        --sky-top: rgb(66 119 174); --sky-mid: rgb(124 165 192); --sky-hor: rgb(202 216 221);
         position: fixed; top: 0; right: 0; bottom: 0; left: 0; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
         background-color: #0b1a3a;
-        background-image: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-mid) 55%, var(--sky-hor) 100%);
+        background-image: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-mid) 48%, var(--sky-hor) 84%, var(--sky-hor) 100%);
       }
       #sky canvas { position: absolute; top: 0; left: 0; display: block; max-width: none; }
       .page { position: relative; z-index: 1; }
@@ -259,8 +253,8 @@
         .x-btn, .x-clock button { transition: none; }
       }
     </style>
-    <link rel="stylesheet" href="redesign.css?v=ae145f418a" />
-    <link rel="stylesheet" href="customization.css?v=6e22603acb" />
+    <link rel="stylesheet" href="redesign.css?v=sf-system-type-rings-20261026" />
+    <link rel="stylesheet" href="customization.css?v=sf-system-type-20261026" />
     <meta name="description" content="Meet JOSIE. A personal voice and chat assistant for your Mac. Natural conversation, real actions, and on-device voice. Free for Apple Silicon." />
   </head>
   <body>
@@ -688,16 +682,16 @@
         if (!ctx && cv) cv.style.display = "none";
         var reduce = false;
         try { reduce = !!(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches); } catch (e) {}
-        var N = [[4, 9, 28], [10, 22, 54], [24, 36, 82], [150, 170, 255], 0.22, [130, 150, 210], 0.1];
+        var N = [[6, 12, 24], [19, 31, 49], [42, 55, 72], [165, 181, 199], 0.32, [105, 119, 136], 0.045];
         // hour, name, top, middle, horizon, sun glow, glass dim, cloud tint, cloud alpha
         var K = [
           [0, "Night"].concat(N),
-          [5.3, "Blue hour", [12, 26, 74], [38, 60, 128], [104, 112, 170], [150, 160, 255], 0.32, [150, 160, 215], 0.14],
-          [6.4, "Sunrise", [58, 76, 146], [228, 143, 160], [255, 195, 154], [255, 170, 120], 0.5, [255, 215, 210], 0.3],
-          [8.5, "Morning", [52, 120, 205], [130, 182, 236], [214, 233, 251], [255, 240, 200], 0.56, [255, 255, 255], 0.4],
-          [12, "Midday", [25, 105, 220], [84, 158, 240], [190, 224, 255], [255, 250, 225], 0.6, [255, 255, 255], 0.42],
-          [16.8, "Golden hour", [70, 108, 175], [238, 176, 104], [255, 210, 122], [255, 190, 90], 0.55, [255, 230, 190], 0.36],
-          [18.9, "Sunset", [40, 42, 108], [194, 69, 122], [255, 138, 61], [255, 120, 70], 0.45, [255, 170, 160], 0.28],
+          [5.3, "Blue hour", [23, 39, 66], [55, 74, 103], [119, 132, 151], [190, 150, 119], 0.38, [148, 145, 146], 0.07],
+          [6.4, "Sunrise", [72, 104, 145], [175, 145, 144], [239, 190, 159], [250, 178, 133], 0.45, [231, 186, 171], 0.18],
+          [8.5, "Morning", [66, 119, 174], [124, 165, 192], [202, 216, 221], [250, 221, 185], 0.46, [244, 247, 246], 0.14],
+          [12, "Midday", [57, 120, 184], [130, 172, 194], [210, 222, 225], [255, 242, 212], 0.43, [250, 251, 248], 0.17],
+          [16.8, "Golden hour", [80, 111, 150], [174, 141, 117], [230, 184, 145], [255, 197, 139], 0.46, [247, 218, 187], 0.18],
+          [18.9, "Sunset", [61, 73, 110], [154, 105, 115], [226, 148, 117], [255, 171, 129], 0.43, [225, 171, 160], 0.14],
           [20.6, "Night"].concat(N),
           [24, "Night"].concat(N)
         ];
@@ -709,7 +703,7 @@
           var o = { name: A[1] }; for (var j = 2; j < 9; j++) o[j] = mix(A[j], B[j], t); return o;
         }
         var clouds = [];
-        for (var l = 0; l < 3; l++) for (var n = 0; n < 7; n++) clouds.push({ l: l, x: Math.random() * 1.6 - 0.3, y: Math.random() * 0.75, r: (0.12 + Math.random() * 0.16) * (1 + l * 0.4), v: 0.004 + l * 0.005 });
+        for (var l = 0; l < 2; l++) for (var n = 0; n < 6; n++) clouds.push({ l: l, x: Math.random() * 1.6 - 0.3, y: 0.18 + Math.random() * 0.68, r: (0.08 + Math.random() * 0.09) * (1 + l * 0.4), v: 0.002 + l * 0.003 });
         var W, H, cur = 8.5, last = 0, dirty = true, shown = "";
         var label = document.querySelector(".x-clock__name");
         var journey = document.querySelector(".sky-journey__track span");
@@ -749,21 +743,22 @@
         }
         function paint(P, dt) {
           var g = ctx.createLinearGradient(0, 0, 0, H), m = Math.max(W, H);
-          g.addColorStop(0, rgb(P[2], 1)); g.addColorStop(0.55, rgb(P[3], 1)); g.addColorStop(1, rgb(P[4], 1));
+          g.addColorStop(0, rgb(P[2], 1));
+          g.addColorStop(0.42, rgb(mix(P[2], P[3], 0.55), 1));
+          g.addColorStop(0.64, rgb(P[3], 1));
+          g.addColorStop(0.86, rgb(P[4], 1));
+          g.addColorStop(1, rgb(P[4], 1));
           ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
-          var p = (cur - 6) / 14, sx, sy;
-          if (p > 0 && p < 1) { sx = W * (0.1 + 0.8 * p); sy = H * (0.9 - Math.sin(Math.PI * p) * 0.75); } else { sx = W * 0.8; sy = H * 0.16; }
-          var s = ctx.createRadialGradient(sx, sy, 0, sx, sy, m * 0.6);
-          s.addColorStop(0, rgb(P[5], 0.85)); s.addColorStop(0.06, rgb(P[5], 0.45)); s.addColorStop(1, rgb(P[5], 0));
-          ctx.fillStyle = s; ctx.fillRect(0, 0, W, H);
           var sc = (window.pageYOffset || 0) / Math.max(1, document.body.scrollHeight);
           clouds.forEach(function (c) {
             if (!reduce) c.x = ((c.x + c.v * dt + 0.3) % 1.6 + 1.6) % 1.6 - 0.3;
-            var r = c.r * m, x = c.x * W, y = (c.y - sc * (0.15 + c.l * 0.25)) * H, gr = ctx.createRadialGradient(x, y, 0, x, y, r);
+            var r = c.r * m, x = c.x * W, y = (c.y - sc * (0.15 + c.l * 0.25)) * H;
+            ctx.save(); ctx.translate(x, y); ctx.scale(2.2, 0.5);
+            var gr = ctx.createRadialGradient(0, 0, 0, 0, 0, r);
             gr.addColorStop(0, rgb(P[7], P[8] * (0.6 + c.l * 0.2))); gr.addColorStop(1, rgb(P[7], 0));
-            ctx.fillStyle = gr; ctx.fillRect(x - r, y - r, r * 2, r * 2);
+            ctx.fillStyle = gr; ctx.fillRect(-r, -r, r * 2, r * 2); ctx.restore();
           });
-          ctx.fillStyle = "rgba(8,14,32," + (P[6] * 0.4).toFixed(3) + ")"; ctx.fillRect(0, 0, W, H);
+          ctx.fillStyle = "rgba(8,14,32," + (P[6] * 0.12).toFixed(3) + ")"; ctx.fillRect(0, 0, W, H);
         }
         var raf = window.requestAnimationFrame ? function (f) { return window.requestAnimationFrame(f); } : function (f) { return setTimeout(function () { f(Date.now()); }, 33); };
         function frame(ts) {
@@ -864,19 +859,35 @@ void main() {
 
   float z = sqrt(max(0.0, 1.0 - r * r));
   float twist = uSwirl * (1.0 - r * r) * (1.4 + 0.6 * sin(t * 0.35));
-  // Stir the volume inside the sphere, keeping its outline and halo steady.
-  // The delayed wake leaves a soft curl behind the hand's direction of travel.
-  vec2 handDelta = q - uPointer;
-  vec2 wakeDelta = q - uWake;
-  float hand = exp(-dot(handDelta, handDelta) * 3.6);
-  float wake = exp(-dot(wakeDelta, wakeDelta) * 2.5);
-  vec2 drag = -uDrag * (hand * 0.34 + wake * 0.18);
-  float spin = uDrag.x * 0.75 - uDrag.y * 0.6;
-  vec2 curl = vec2(-handDelta.y, handDelta.x) * spin * hand * 0.8;
-  vec2 smokeQ = q + (drag + curl - handDelta * hand * 0.12) * uTouch;
-  vec2 sq = rot2(smokeQ, t * 0.10 + twist + uSwirl * t * 0.45);
-  vec3 sp = vec3(sq * 1.15, z * 0.55);
-
+  // Keep the original procedural smoke and layer the 3D airflow over it.
+  float pointerZ = sqrt(max(0.0, 1.0 - dot(uPointer, uPointer)));
+  float wakeZ = sqrt(max(0.0, 1.0 - dot(uWake, uWake)));
+  vec3 surface = vec3(q, z);
+  vec3 pointerPos = vec3(uPointer, pointerZ);
+  vec3 wakePos = vec3(uWake, wakeZ);
+  vec3 pointerDelta = surface - pointerPos;
+  vec3 wakeDelta = surface - wakePos;
+  float surfaceDistance = length(pointerDelta);
+  float hand = exp(-dot(pointerDelta, pointerDelta) * 18.0);
+  float wake = exp(-dot(wakeDelta, wakeDelta) * 10.0);
+  float airPressure = exp(-dot(pointerDelta, pointerDelta) * 8.0);
+  float wakePressure = exp(-dot(wakeDelta, wakeDelta) * 5.5);
+  float speed = length(uDrag);
+  vec3 flow = vec3(uDrag, -dot(uDrag, uPointer) / max(pointerZ, 0.2));
+  vec3 wakeFlow = vec3(uDrag, -dot(uDrag, uWake) / max(wakeZ, 0.2));
+  flow -= surface * dot(flow, surface);
+  wakeFlow -= surface * dot(wakeFlow, surface);
+  vec3 away = surface * dot(pointerPos, surface) - pointerPos;
+  vec3 wakeAway = surface * dot(wakePos, surface) - wakePos;
+  vec3 airCurl = cross(surface, away);
+  vec3 wakeCurl = cross(surface, wakeAway);
+  vec3 wind = (away * 2.25 + airCurl * 1.4) * airPressure;
+  wind += (wakeAway * 1.1 + wakeCurl * 0.75) * wakePressure * 0.32;
+  wind += flow * hand * (0.16 + speed * 0.08) + wakeFlow * wake * 0.22;
+  vec3 sp = vec3(q * 1.15, z * 0.55) - wind * uTouch * 1.05;
+  vec2 sq = rot2(sp.xy, t * 0.10 + twist + uSwirl * t * 0.45);
+  sp.xy = sq;
+  vec3 normal = normalize(surface + away * airPressure * uTouch * 0.12 + vec3(0.0, 0.0, hand * uTouch * 0.025));
   float warpAmt = 1.25 + uTurb * 0.9 + uLevel * 1.3;
   vec3 w1 = vec3(fbm4(sp * 1.3 + vec3(0.0, 0.0, t * 0.22)),
                  fbm4(sp * 1.3 + vec3(3.1, 7.7, t * 0.22)),
@@ -885,17 +896,19 @@ void main() {
                  fbm4(sp * 2.1 + w1 * 2.0 + vec3(8.3, 2.8, t * 0.27)), 0.0);
   float smoke = fbm5(sp * 1.7 + w2 * warpAmt + vec3(0.0, 0.0, t * 0.17));
   float smokeFar = fbm4(sp * 3.1 + w1 * 1.4 - vec3(0.0, 0.0, t * 0.26) + 5.0);
-
-  float lit = clamp(dot(q, normalize(vec2(0.62, -0.78))) * 0.55 + 0.45, 0.0, 1.0);
-
-  float d = smokeQ.y + 0.22 - 0.62 * smokeQ.x + 0.18 * smokeQ.x * smokeQ.x + (w2.x - 0.5) * 0.55 + sin(t * 0.2) * 0.04;
+  float d = sp.y + 0.22 - 0.62 * sp.x + 0.18 * sp.x * sp.x + (w2.x - 0.5) * 0.55 + sin(t * 0.2) * 0.04;
   float streak = exp(-d * d * 26.0) * smoothstep(-0.7, 0.35, q.x);
   float df = d + 0.09 + (smokeFar - 0.5) * 0.3;
   float streakFine = exp(-df * df * 120.0) * smoothstep(-0.2, 0.6, q.x);
 
+  float lit = clamp(dot(normal, normalize(vec3(0.62, -0.78, 0.95))) * 0.55 + 0.45, 0.0, 1.0);
+
   vec3 col = mix(uCore, uMid, smoothstep(0.30, 0.95, smoke * 0.75 + lit * 0.55));
   col = mix(col, uHigh, smoothstep(0.62, 1.05, lit * 0.8 + smokeFar * 0.45) * 0.9);
-  col = mix(col, uHigh, clamp(streak * (0.55 + 0.45 * smoke) + streakFine * 0.6, 0.0, 1.0));
+  float clearedSmoke = (hand * 0.12 + wake * 0.05) * uTouch;
+  col = mix(col, uCore, clearedSmoke);
+  float pointerHighlight = pow(max(dot(normal, normalize(vec3(0.35, -0.55, 1.0))), 0.0), 10.0) * hand * uTouch * 0.28;
+  col = mix(col, uHigh, clamp(streak * (0.55 + 0.45 * smoke) + streakFine * 0.6 + pointerHighlight, 0.0, 1.0));
   col += (smokeFar - 0.5) * 0.10 + (smoke - 0.5) * 0.06;
 
   float fres = pow(1.0 - z, 2.4);
