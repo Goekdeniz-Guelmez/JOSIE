@@ -253,7 +253,7 @@
         .x-btn, .x-clock button { transition: none; }
       }
     </style>
-    <link rel="stylesheet" href="redesign.css?v=sf-system-type-rings-20261026" />
+    <link rel="stylesheet" href="redesign.css?v=sf-system-type-rings-countdown-20261107" />
     <link rel="stylesheet" href="customization.css?v=sf-system-type-20261026" />
     <meta name="description" content="Meet JOSIE. A personal voice and chat assistant for your Mac. Natural conversation, real actions, and on-device voice. Free for Apple Silicon." />
   </head>
@@ -272,7 +272,16 @@
       </header>
       <aside class="release-alert" aria-label="Release announcement">
         <span class="release-alert__badge">RELEASE UPDATE</span>
-        <span>JOSIE-Voice will be released in <strong>December 2026.</strong></span>
+        <span class="release-alert__text">JOSIE-Voice will be released in <strong>December 2026.</strong></span>
+        <div class="release-countdown" role="timer" aria-label="Time until JOSIE-Voice launches" hidden>
+          <span class="release-countdown__label">JOSIE-Voice launches in</span>
+          <span class="release-countdown__units">
+            <span><b data-unit="days">--</b><small>days</small></span>
+            <span><b data-unit="hours">--</b><small>hours</small></span>
+            <span><b data-unit="minutes">--</b><small>min</small></span>
+            <span><b data-unit="seconds">--</b><small>sec</small></span>
+          </span>
+        </div>
         <span class="release-alert__spark" aria-hidden="true">✦</span>
       </aside>
 
@@ -1200,6 +1209,7 @@ void main() {
     </script>
     <script src="main.js?v=18f0a30fb3"></script>
     <script src="redesign.js?v=70f6228c18"></script>
+    <script src="countdown.js?v=20261107"></script>
     <script src="download.js?v=c798d3a9b6"></script>
     <script src="customization.js?v=2ad6612072"></script>
     <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
