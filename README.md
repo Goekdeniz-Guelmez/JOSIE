@@ -2,7 +2,7 @@
   <img src="docs/logo.png" alt="Josie logo" width="160">
 </p>
 
-<h1 align="center">Josie</h1>
+<h1 align="center">JOSIE</h1>
 
 <p align="center">
   <b>Talk to your Mac.</b><br>
