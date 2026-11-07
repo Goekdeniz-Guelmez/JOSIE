@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="docs/logo.png" alt="JOSIE-Voice logo" width="160">
+  <img src="docs/logo.png" alt="Josie logo" width="160">
 </p>
 
-<h1 align="center">JOSIE-Voice</h1>
+<h1 align="center">Josie</h1>
 
 <p align="center">
   <b>Talk to your Mac.</b><br>
@@ -20,7 +20,7 @@
 </p>
 
 > [!WARNING]
-> **No download yet.** The first public JOSIE-Voice DMG for the Mac will be released in **December 2026**. Until then there is no installer here or in [Releases](https://github.com/Goekdeniz-Guelmez/JOSIE-Voice/releases); the 1.0.0 release notes describe what's coming.
+> **No download yet.** The first public Josie DMG for the Mac will be released in **December 2026**. Until then there is no installer here or in [Releases](https://github.com/Goekdeniz-Guelmez/JOSIE-Voice/releases); the 1.0.0 release notes describe what's coming.
 
 ---
 
@@ -30,8 +30,8 @@ Switch between **Voice** and **Chat** with one tap. It's the same conversation e
 
 <table>
   <tr>
-    <td width="50%" align="center"><a href="docs/images/mac-call-orb-1600.webp"><img src="docs/images/mac-call-orb-800.webp" alt="JOSIE-Voice in Voice mode on the Mac: the big orb, Listening… and five round call controls (mockup)"></a></td>
-    <td width="50%" align="center"><a href="docs/images/mac-chat-1600.webp"><img src="docs/images/mac-chat-800.webp" alt="JOSIE-Voice in Chat mode on the Mac: glass bubbles, the sessions sidebar and a PDF in the composer (mockup)"></a></td>
+    <td width="50%" align="center"><a href="docs/images/mac-call-orb-1600.webp"><img src="docs/images/mac-call-orb-800.webp" alt="Josie in Voice mode on the Mac: the big orb, Listening… and five round call controls (mockup)"></a></td>
+    <td width="50%" align="center"><a href="docs/images/mac-chat-1600.webp"><img src="docs/images/mac-chat-800.webp" alt="Josie in Chat mode on the Mac: glass bubbles, the sessions sidebar and a PDF in the composer (mockup)"></a></td>
   </tr>
   <tr>
     <td align="center"><b>Voice mode</b><br>Just talk, and JOSIE answers out loud. Live transcripts appear as you speak. (mockup)</td>
@@ -242,7 +242,7 @@ Each app is off until you turn it on in Settings → Apple tools, macOS asks you
 
 ## How it works
 
-JOSIE-Voice is a native Mac app built with SwiftUI and MLX Swift. Everything except the language model runs on your Mac's Apple Silicon:
+Josie is a native Mac app built with SwiftUI and MLX Swift. Everything except the language model runs on your Mac's Apple Silicon:
 
 - **Listening:** Silero VAD notices when you speak, and Smart Turn v3 knows when you've finished.
 - **Speech recognition:** Qwen3-ASR by default, or NVIDIA Parakeet TDT 0.6B v3 or Apple's on-device recognizer (chosen in Settings).
@@ -276,23 +276,23 @@ After setup, everything works offline except the language model, which runs in O
 
 **It says "Ollama isn't running".** Open Ollama from Applications, then click Recheck in JOSIE's setup.
 
-**JOSIE can't hear me.** Open System Settings → Privacy & Security → Microphone and turn on JOSIE-Voice.
+**JOSIE can't hear me.** Open System Settings → Privacy & Security → Microphone and turn on Josie.
 
 **How much space does it need?** About 5 GB of voice models plus about 1 GB for the language model, at the default small sizes.
 
-**How do I uninstall it?** Drag JOSIE-Voice to the Trash. To remove its data and models too, delete the `JOSIE-Voice` folder in `~/Library/Application Support`.
+**How do I uninstall it?** Drag Josie to the Trash. To remove its data and models too, delete the `Josie` folder in `~/Library/Application Support`.
 
 ## The JOSIE family
 
 <img src="docs/logo.png" alt="JOSIE orb" width="56" align="left">
 
-JOSIE-Voice comes from the JOSIE family of personality-driven language models by Gökdeniz Gülmez, trained entirely on Apple Silicon with [MLX-LM-LoRA](https://github.com/Goekdeniz-Guelmez/mlx-lm-lora). Meet the models on [Hugging Face](https://huggingface.co/Goekdeniz-Guelmez).
+Josie comes from the JOSIE family of personality-driven language models by Gökdeniz Gülmez, trained entirely on Apple Silicon with [MLX-LM-LoRA](https://github.com/Goekdeniz-Guelmez/mlx-lm-lora). Meet the models on [Hugging Face](https://huggingface.co/Goekdeniz-Guelmez).
 
 <br clear="left">
 
 ## About this repository
 
-This repository hosts the JOSIE-Voice website and visuals: the site lives in [`docs/`](docs/) and is served by GitHub Pages. App downloads will be published in [GitHub Releases](https://github.com/Goekdeniz-Guelmez/JOSIE-Voice/releases), starting with the first DMG in December 2026; the source code is private.
+This repository hosts the Josie website and visuals: the site lives in [`docs/`](docs/) and is served by GitHub Pages. App downloads will be published in [GitHub Releases](https://github.com/Goekdeniz-Guelmez/JOSIE-Voice/releases), starting with the first DMG in December 2026; the source code is private.
 
 Built with MLX Swift, Qwen3-ASR, Qwen3-TTS, Parakeet, Kokoro, Silero VAD, Smart Turn v3 and WeSpeaker. Ollama is a separate app by its own developers.
 
