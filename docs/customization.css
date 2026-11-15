@@ -31,7 +31,7 @@
 .custom-screen { min-width: 0; margin: 0; position: relative; }
 .custom-screen::before { content: ""; position: absolute; inset: -12% -6% 10%; pointer-events: none; background: radial-gradient(ellipse, #7c9bcd20, transparent 68%); z-index: -1; }
 .custom-screen > .x-zoom { border-radius: 12px; overflow: hidden; background: #24334b; box-shadow: 0 0 0 1px #ffffff21, 0 22px 50px -25px #000b; }
-.custom-screen img { width: 100%; height: auto; aspect-ratio: 16/10; object-fit: contain; }
+.custom-screen img { width: 100%; height: auto; aspect-ratio: auto; object-fit: contain; }
 .custom-screen figcaption { display: flex; justify-content: flex-start; font-size: 10px; line-height: 1.7; padding-top: 15px; color: #a99fac; }
 .custom-scope { margin-top: 18px; padding-top: 16px; border-top: 1px solid #ffffff12; color: #a99fac; font-size: 10px; line-height: 1.8; }
 @keyframes custom-arrive { from { opacity: .3; transform: translateY(7px); } to { opacity: 1; transform: none; } }
