@@ -274,7 +274,7 @@ Each app is off until you turn it on in Settings → Apple tools, macOS asks you
 |---|---|
 | **Real conversation** | Knows when you've finished talking. Interrupt Josie just by speaking. |
 | **Knows your voice** | Learns you from three short phrases and tells people apart. |
-| **Voices you choose** | Pick a preset, clone a voice from a short recording, or describe a new one in words. |
+| **Voices you choose** | Pick a preset, clone a voice from a short recording, or describe a new one in words. Engines include Qwen3-TTS, Kokoro and ZONOS3-Mini. |
 | **Private by design** | Hearing, voice recognition and speech run on your Mac. Your data stays on your Mac. No account. |
 | **Takes real action** | Adds reminders and events, finds places in Maps and drafts Messages (you tap Send). Each one is off until you turn it on. |
 | **Sees what you show it** | Turn on the camera and ask about what it sees. Needs an image-capable model. |
@@ -283,6 +283,13 @@ Each app is off until you turn it on in Settings → Apple tools, macOS asks you
 | **Personas** | Talk to JOSIE, JARVIS, HAL 9000 or a character you write, each with its own prompt, voice and orb colour. |
 | **Your iPhone, your Mac** | In the iPhone preview, pick your Mac as the provider, at home or over Tailscale. The call runs on your Mac, and you can show Josie a photo. |
 | **Choose how it hears** | Speech recognition with Qwen3-ASR, NVIDIA Parakeet v3 or Apple's own on-device recognizer. All on your Mac. |
+| **Full-duplex voice engines** | Talk with LFM3, Nemotron VoiceChat, Moshi, Realtime Venus, caramel-1, Awaken or Haru. They run on your Mac and are experimental. |
+| **Wake words** | Answers when a sentence starts or ends with your wake word, with a follow-up window and listen-back. |
+| **Apple Watch calls** | Start, end and mute a call from your Watch, or connect it straight to your server. |
+| **Your choice of model** | Use Anthropic's Claude, an OpenAI-compatible service, Ollama or Apple Intelligence for the language model. |
+| **Documents, pictures and media** | The Library reads Word and PowerPoint files, pictures and PDF figures, and embeds audio and video for search. |
+| **Speech that rests** | Unloads the speech models after a quiet period you set. The next call loads them again. |
+| **API wall** | A full-width dashboard shows the local API's clients, streams and tool calls at a glance. |
 | **Its own chat prompt** | Write separate instructions for Chat and Voice. Muted in a call? Typed messages still get a text reply. |
 
 ## How it works
