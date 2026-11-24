@@ -330,11 +330,11 @@ After setup, everything works offline except the language model, which runs in O
 
 **How do I uninstall it?** Drag Josie to the Trash. To remove its data and models too, delete the `Josie` folder in `~/Library/Application Support`.
 
-## The JOSIE family
+## The JOSIE model family
 
 <img src="docs/logo.png" alt="JOSIE orb" width="56" align="left">
 
-Josie comes from the JOSIE family of personality-driven language models by Gökdeniz Gülmez, trained entirely on Apple Silicon with [MLX-LM-LoRA](https://github.com/Goekdeniz-Guelmez/mlx-lm-lora). Meet the models on [Hugging Face](https://huggingface.co/Goekdeniz-Guelmez).
+The JOSIE model family is a separate project by the same author: custom fine-tuned, personality-driven language models, trained entirely on Apple Silicon with [MLX-LM-LoRA](https://github.com/Goekdeniz-Guelmez/mlx-lm-lora). The app does not need them; it works with whichever language model you choose. Meet the models on [Hugging Face](https://huggingface.co/Goekdeniz-Guelmez).
 
 <br clear="left">
 
